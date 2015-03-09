@@ -20,3 +20,11 @@ Rob (Dev)
 Antoine (QA)
 	-Will check tickets and begin development
 	
+	code analysis on build
+	stylecop ms build
+	selenium
+		rc driver
+		chrome webdriver
+		internet explorer webdriver
+	sikuliintegrator
+	
