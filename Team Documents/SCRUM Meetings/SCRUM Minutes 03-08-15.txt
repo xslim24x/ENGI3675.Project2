@@ -1,0 +1,22 @@
+
+ENGI3675 - Database Systems
+
+
+	SCRUM Meeting
+	Project 2
+
+
+Slim (PM)
+	-Agree to have common usernames, databases, application pools, etc for development:
+		Application Name: DynamicTable (cs file, application pool,page)
+		Database: LU.ENGI3675.Proj2
+		Ports: 4226 (debug IIS Express) 4227 (publishing page)
+	-Will post up tasks for everyone asap, go in and check (set to progress)
+
+Rob (Dev)
+	-Agreement on things to get done
+	-Will check tickets and begin development
+	
+Antoine (QA)
+	-Will check tickets and begin development
+	
