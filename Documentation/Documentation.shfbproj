@@ -30,6 +30,10 @@
     <SccProvider>SAK</SccProvider>
     <SccAuxPath>SAK</SccAuxPath>
     <SccLocalPath>SAK</SccLocalPath>
+    <DocumentationSources>
+      <DocumentationSource sourceFile="..\Project2-Engi3675\Project2-Engi3675.csproj" />
+      <DocumentationSource sourceFile="..\Testing\Testing.csproj" />
+    </DocumentationSources>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->
