@@ -4,6 +4,9 @@ ENGI3675 - Database Systems
 
 	SCRUM Meeting
 	Project 2
+	Date: March 8 2015
+	Time: 8:00
+	
 
 
 Slim (PM)

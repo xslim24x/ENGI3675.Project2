@@ -1,0 +1,26 @@
+
+ENGI3675 - Database Systems
+
+
+	SCRUM Meeting
+	Project 2
+	Date: March 10 2015
+	Time: 8:42 PM
+	
+
+
+Slim (PM)
+	-Main focus will be on testing
+	-Design of CRUD functions should use/return dictionary 
+	of class can be used for both testing/application
+	-Will send DDL and unit testing examples
+
+Rob (Dev)
+	-worked on tables, input boxes done
+	-will change submit button to save on each row?
+	-need to work on ddl
+	
+Antoine (QA)
+	-Get test cases ready
+	-Focus on testing injection on CRUD interface
+	-Will check tickets and begin development
