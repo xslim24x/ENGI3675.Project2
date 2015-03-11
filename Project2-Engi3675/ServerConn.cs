@@ -6,7 +6,7 @@ using Npgsql;
 
 namespace Project2_Engi3675
 {
-    public class Project2
+    public class ServerConn
     {
 
     }
