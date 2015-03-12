@@ -7,9 +7,11 @@
     <title>ENGI3675 ASP Project 2</title>
 </head>
 <body>
+
      <div id="Heading1"><h1>ENGI3675 ASP Animal Database System:</h1></div>
     <form id="form1" runat="server">
     <div>
+        
         <asp:Table ID="tblAnimals" runat="server" BorderWidth="1">
             <asp:TableHeaderRow>
                 <asp:TableHeaderCell ColumnSpan="2">
@@ -103,8 +105,8 @@
   </tr>
 -->
 <br><br>
-<input type="submit" value="New Row">
-<input type="submit" value="Save"/>
+<asp:Button ID="NewRow" runat="server" onclick="Page_Load" Text="New Row">
+<asp:Button runat="server" ID=UpdateDB" runat="server" OnClick="dataUpdate" Text="Submit">
 
 </body>
 </html>
