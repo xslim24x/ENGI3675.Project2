@@ -28,6 +28,9 @@
     <td class="tg-031e">
         Age
     </td>
+    <td class="tg-031e">
+        Delete
+    </td>
   </tr>
   <tr>
     <td class="tg-031e">        
@@ -43,6 +46,9 @@
     </td>
     <td>
         <input type="text" name="ageInput" value="Input"/>
+    </td>
+    <td>
+        <input type="submit" value="Delete">
     </td>
   </tr>
  <!-- <tr>
@@ -78,7 +84,8 @@
 -->
 </table>
 <br><br>
-<input type="submit" value="Submit">
+<input type="submit" value="New Row">
+<input type="submit" value="Save"/>
 </form>
     <div>
     
