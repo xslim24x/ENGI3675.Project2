@@ -108,7 +108,7 @@
 -->
 <br><br>
 <asp:Button ID="NewRow" runat="server" onclick="Page_Load" Text="New Row">
-<asp:Button runat="server" ID=UpdateDB" runat="server" OnClick="dataUpdate" Text="Submit">
+<asp:Button runat="server" ID="UpdateDB" runat="server" OnClick="dataUpdate" Text="Submit">
 
 </body>
 </html>
