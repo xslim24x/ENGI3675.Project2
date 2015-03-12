@@ -1,0 +1,43 @@
+﻿#Heading1{
+    margin-left:20px;
+}
+#topimg {
+    margin-left: 100px;
+    margin-top: 40px;
+}
+#title {
+    margin-left: 60px;
+    font-family: Consolas;
+    font-size: 55;
+}
+table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    padding: 10px;
+    margin-left:40px;
+}
+
+td, th {
+    font-size: 1em;
+    border: 2px solid #FF9900;
+    padding: 3px 7px 2px 7px;
+}
+
+th {
+    font-size: 1.1em;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: #FF9900;
+    color: #ffffff;
+}
+#addbtn {
+    margin-left: 50px;
+    margin-top: 10px;
+    padding: 5px;
+
+}
+tr:nth-child(even) td {
+    color: #000000;
+    background-color: #FFCC66;
+}
