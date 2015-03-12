@@ -4,16 +4,36 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>ENGI3675 ASP Project 2</title>
 </head>
 <body>
+     <div id="Heading1"><h1>ENGI3675 ASP Animal Database System:</h1></div>
     <form id="form1" runat="server">
-     <style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-</style>
-<form action="action_page.php">
+    <div>
+        <asp:Table ID="tblAnimals" runat="server" BorderWidth="1">
+            <asp:TableHeaderRow>
+                <asp:TableHeaderCell ColumnSpan="2">
+                    Animals
+                </asp:TableHeaderCell>
+            </asp:TableHeaderRow>
+            <asp:TableRow>
+                <asp:TableCell BackColor="#94D4E9">
+                    Serial Number
+                </asp:TableCell>
+                <asp:TableCell BackColor="#94D4E9">
+                    Breed
+                </asp:TableCell>
+                <asp:TableCell BackColor="#94D4E9">
+                    Weight
+                </asp:TableCell>
+                <asp:TableCell BackColor="#94D4E9">
+                    Age
+                </asp:TableCell>
+            </asp:TableRow>   
+        </asp:Table> 
+    </div>
+    </form>
+<!--<form action="action_page.php">
 <table class="tg">
   <tr>
     <td class="tg-031e">
@@ -51,7 +71,7 @@
         <input type="submit" value="Delete">
     </td>
   </tr>
- <!-- <tr>
+  <tr>
     <td class="tg-031e">        
         Turquoise
     </td>
@@ -82,14 +102,9 @@
     </td>
   </tr>
 -->
-</table>
 <br><br>
 <input type="submit" value="New Row">
 <input type="submit" value="Save"/>
-</form>
-    <div>
-    
-    </div>
-    </form>
+
 </body>
 </html>

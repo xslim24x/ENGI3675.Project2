@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Npgsql;
 
-namespace Project2_Engi3675
+namespace AnimalData
 {
     public class Animal
     {
