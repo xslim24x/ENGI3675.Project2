@@ -4,11 +4,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ENGI3675 ASP Project 2</title>
+    <title>ENGI3675 ASP Project 2 - Animal Management System</title>
+    <link rel="stylesheet" type="text/css" href="animalstyle.css">
 </head>
 <body>
-
-     <div id="Heading1"><h1>ENGI3675 ASP Animal Database System:</h1></div>
+    <div id="title"><h4>ENGI3675 ASP Dynamic Database System:</h4></div> 
+    <h1 id="title">Animal Management System</h1>
+    <img src="pets.jpg" id="topimg">
     <form id="form1" runat="server">
     <div>
         
