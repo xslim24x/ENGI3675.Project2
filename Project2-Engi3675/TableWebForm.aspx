@@ -5,12 +5,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>ENGI3675 ASP Project 2 - Animal Management System</title>
-    <link rel="stylesheet" type="text/css" href="animalstyle.css">
+    <link rel="stylesheet" type="text/css" href="animalstyle.css" />
 </head>
 <body>
-    <div id="title"><h4>ENGI3675 ASP Dynamic Database System:</h4></div> 
-    <h1 id="title">Animal Management System</h1>
-    <img src="pets.jpg" id="topimg">
+    <div class="title"><h4>ENGI3675 ASP Dynamic Database System:</h4></div> 
+    <h1 class="title">Animal Management System</h1>
+    <img src="pets.jpg" id="topimg" />
     <form id="form1" runat="server">
     <div>
         
@@ -108,7 +108,7 @@
 -->
 <br><br>
 <asp:Button ID="NewRow" runat="server" onclick="Page_Load" Text="New Row">
-<asp:Button runat="server" ID="UpdateDB" runat="server" OnClick="dataUpdate" Text="Submit">
+<asp:Button ID="UpdateDB" runat="server" OnClick="dataUpdate" Text="Submit">
 
 </body>
 </html>
