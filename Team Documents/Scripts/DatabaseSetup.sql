@@ -27,8 +27,8 @@ drop table if exists Animals Cascade;
 create table Animals (
 	Serial_Number serial primary key,
 	Breed text not null check (length(Breed)>0),
-	Weight float not null check (Weight > 0 AND Weight < 500),
-	Age integer not null check (Age > 0 AND Age < 100)
+	Weight real not null check (Weight > 0 AND Weight < 500),
+	Age real not null check (Age > 0 AND Age < 100)
 );
 
 grant select, insert, update, delete on table Animals to "DynamicTable";
