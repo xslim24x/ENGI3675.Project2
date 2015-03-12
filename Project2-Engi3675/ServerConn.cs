@@ -26,13 +26,13 @@ namespace AnimalData
         {
             int problems = 0;
 
-            NpgsqlConnection conn = new NpgsqlConnection("Server=127.0.0.1; Port=5432; Database=ENGI3675.Proj2; Integrated Security=true;");
+            NpgsqlConnection conn = new NpgsqlConnection("Server=127.0.0.1; Port=5432; Database=LU.ENGI3675.Proj2; Integrated Security=true;");
 
             try
             {
                 conn.Open();
 
-                NpgsqlCommand cmd = new NpgsqlCommand("INSERT INTO public.\"Animals\"(Breed,Weight,Age) VALUES (:a.AnimalBreed,:a.AnimalWeight,:a.AnimalAge);", conn);
+                NpgsqlCommand cmd = new NpgsqlCommand("INSERT INTO public.\"animals\"(Breed,Weight,Age) VALUES (:a.AnimalBreed,:a.AnimalWeight,:a.AnimalAge);", conn);
                 NpgsqlDataReader dr = cmd.ExecuteReader();
 
             }
@@ -58,13 +58,13 @@ namespace AnimalData
             // create the dictionary accoring to values in the database
             Dictionary<int, Animal> items = new Dictionary<int, Animal>();
 
-            NpgsqlConnection conn = new NpgsqlConnection("Server=127.0.0.1; Port=5432; Database=ENGI3675.Proj2; Integrated Security=true;");
+            NpgsqlConnection conn = new NpgsqlConnection("Server=127.0.0.1; Port=5432; Database=LU.ENGI3675.Proj2; Integrated Security=true;");
 
             try
             {
                 conn.Open();
 
-                NpgsqlCommand cmd = new NpgsqlCommand("SELECT * FROM public.\"Animals\"", conn);
+                NpgsqlCommand cmd = new NpgsqlCommand("SELECT * FROM public.\"animals\"", conn);
                 NpgsqlDataReader dr = cmd.ExecuteReader();
 
                 Animal temp = new Animal();
@@ -99,12 +99,12 @@ namespace AnimalData
         {
             int problems = 0;
 
-            NpgsqlConnection conn = new NpgsqlConnection("Server=127.0.0.1; Port=5432; Database=ENGI3675.Proj2; Integrated Security=true;");
+            NpgsqlConnection conn = new NpgsqlConnection("Server=127.0.0.1; Port=5432; Database=LU.ENGI3675.Proj2; Integrated Security=true;");
 
             try
             {
                 conn.Open();
-                NpgsqlCommand cmd = new NpgsqlCommand("UPDATE public.\"Animals\"(Breed,Weight,Age) VALUES (:a.AnimalBreed,:a.AnimalWeight,:a.AnimalAge) WHERE Serial_Number = :id;", conn);
+                NpgsqlCommand cmd = new NpgsqlCommand("UPDATE public.\"animals\"(Breed,Weight,Age) VALUES (:a.AnimalBreed,:a.AnimalWeight,:a.AnimalAge) WHERE Serial_Number = :id;", conn);
                 NpgsqlDataReader dr = cmd.ExecuteReader();
 
             }
@@ -129,13 +129,13 @@ namespace AnimalData
         {
             int problems = 0;
 
-            NpgsqlConnection conn = new NpgsqlConnection("Server=127.0.0.1; Port=5432; Database=ENGI3675.Proj2; Integrated Security=true;");
+            NpgsqlConnection conn = new NpgsqlConnection("Server=127.0.0.1; Port=5432; Database=LU.ENGI3675.Proj2; Integrated Security=true;");
 
             try
             {
                 conn.Open();
 
-                NpgsqlCommand cmd = new NpgsqlCommand("DELETE FROM public.\"Animals\" WHERE Serial_Number = :id;", conn);
+                NpgsqlCommand cmd = new NpgsqlCommand("DELETE FROM public.\"animals\" WHERE Serial_Number = :id;", conn);
                 NpgsqlDataReader dr = cmd.ExecuteReader();
 
             }

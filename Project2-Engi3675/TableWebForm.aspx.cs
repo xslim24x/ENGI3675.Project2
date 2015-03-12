@@ -22,6 +22,7 @@ namespace Project2_Engi3675
                 string column2 = a.Value.AnimalBreed;
                 double column3 = a.Value.AnimalWeight;
                 double column4 = a.Value.AnimalAge;
+                string column5 = "<asp:Button ID=\"UpdateDB\" runat=\"server\" OnClick=\"dataUpdate\" Text=\"Submit\" />";
 
                 // create a row for each row pulled
                 TableRow newRow1 = new TableRow();
@@ -29,21 +30,23 @@ namespace Project2_Engi3675
                 TableCell newCell2 = new TableCell();
                 TableCell newCell3 = new TableCell();
                 TableCell newCell4 = new TableCell();
-
-                newRow1.Cells.Add(newCell1);
-                newRow1.Cells.Add(newCell2);
-                newRow1.Cells.Add(newCell3);
-                newRow1.Cells.Add(newCell4);
+                TableCell newCell5 = new TableCell();
+                TableCell newCell6 = new TableCell();
+                
 
                 Label newLabel1 = new Label();
                 Label newLabel2 = new Label();
                 Label newLabel3 = new Label();
                 Label newLabel4 = new Label();
+                Label newLabel5 = new Label();
+                Label newLabel6 = new Label();
 
                 newLabel1.Text = column1;
                 newLabel2.Text = column2;
                 newLabel3.Text = column3.ToString();
                 newLabel4.Text = column4.ToString();
+                newLabel5.Text = column5;
+                newLabel5.Text = "";
 
 
                 // add labels to each cell and add cells to the rows
@@ -51,15 +54,24 @@ namespace Project2_Engi3675
                 newCell2.Controls.Add(newLabel2);
                 newCell3.Controls.Add(newLabel3);
                 newCell4.Controls.Add(newLabel2);
+                newCell5.Controls.Add(newLabel5);
+                newCell5.Controls.Add(newLabel6);
 
                 newRow1.Cells.Add(newCell1);
                 newRow1.Cells.Add(newCell2);
                 newRow1.Cells.Add(newCell3);
                 newRow1.Cells.Add(newCell4);
+                newRow1.Cells.Add(newCell5);
+                newRow1.Cells.Add(newCell6);
 
 
                 this.tblAnimals.Rows.Add(newRow1);
             }
+        }
+
+        protected void dataUpdate(object sender, EventArgs e)
+        {
+
         }
     }
 }
