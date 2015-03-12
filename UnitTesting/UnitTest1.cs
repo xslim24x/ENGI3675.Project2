@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-
-namespace Testing
+namespace UnitTesting
 {
     [TestClass]
     public class UnitTest1
@@ -17,14 +13,10 @@ namespace Testing
         [TestMethod]
         public int DictCount()
         {
+            
             int count = 0;
 
             return 0;
-        }
-
-        [TestMethod]
-        public void TestMethod1()
-        {
         }
     }
 }

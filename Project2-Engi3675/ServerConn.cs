@@ -72,12 +72,10 @@ namespace AnimalData
                 // iterate through the columns and add results to the dictionary
                 while (dr.Read())
                 {
-
                     temp.AnimalBreed = (string)dr["Breed"];
                     temp.AnimalAge = (double)dr["Age"];
                     temp.AnimalWeight = (double)dr["Weight"];
                     temp2.Add((int)dr["Serial_Number"], temp);
-
                 }
             }
             finally

@@ -16,9 +16,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{440AEF
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTesting", "UnitTesting\UnitTesting.csproj", "{C5C895AF-5F26-4E0E-9AA4-B49624BBE941}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
+		SccNumberOfProjects = 5
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://slimbabay.visualstudio.com/defaultcollection
 		SccLocalPath0 = .
@@ -31,6 +33,9 @@ Global
 		SccProjectUniqueName3 = Testing\\Testing.csproj
 		SccProjectName3 = Testing
 		SccLocalPath3 = Testing
+		SccProjectUniqueName4 = UnitTesting\\UnitTesting.csproj
+		SccProjectName4 = UnitTesting
+		SccLocalPath4 = UnitTesting
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +88,14 @@ Global
 		{D352FA2D-F668-402E-B0A0-613409BA2E5B}.Release|x86.ActiveCfg = Release|x86
 		{D352FA2D-F668-402E-B0A0-613409BA2E5B}.Release|x86.Build.0 = Release|x86
 		{D352FA2D-F668-402E-B0A0-613409BA2E5B}.Release|x86.Deploy.0 = Release|x86
+		{C5C895AF-5F26-4E0E-9AA4-B49624BBE941}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5C895AF-5F26-4E0E-9AA4-B49624BBE941}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5C895AF-5F26-4E0E-9AA4-B49624BBE941}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C5C895AF-5F26-4E0E-9AA4-B49624BBE941}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C5C895AF-5F26-4E0E-9AA4-B49624BBE941}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5C895AF-5F26-4E0E-9AA4-B49624BBE941}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5C895AF-5F26-4E0E-9AA4-B49624BBE941}.Release|x64.ActiveCfg = Release|Any CPU
+		{C5C895AF-5F26-4E0E-9AA4-B49624BBE941}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
