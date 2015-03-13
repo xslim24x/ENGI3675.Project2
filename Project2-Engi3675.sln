@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project2-Engi3675", "Project2-Engi3675\Project2-Engi3675.csproj", "{5D05987A-CAEA-4092-9D7C-13C270241989}"
 EndProject
@@ -30,12 +30,12 @@ Global
 		SccProjectUniqueName2 = Documentation\\Documentation.shfbproj
 		SccProjectName2 = Documentation
 		SccLocalPath2 = Documentation
-		SccProjectUniqueName3 = Testing\\Testing.csproj
-		SccProjectName3 = Testing
-		SccLocalPath3 = Testing
-		SccProjectUniqueName4 = UnitTesting\\UnitTesting.csproj
-		SccProjectName4 = UnitTesting
-		SccLocalPath4 = UnitTesting
+		SccProjectUniqueName3 = UnitTesting\\UnitTesting.csproj
+		SccProjectName3 = UnitTesting
+		SccLocalPath3 = UnitTesting
+		SccProjectUniqueName4 = Testing\\Testing.csproj
+		SccProjectName4 = Testing
+		SccLocalPath4 = Testing
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
