@@ -13,7 +13,6 @@ namespace UnitTesting
         /// <summary>
         /// Unit Test to Count entries in Database
         /// </summary>
-        /// <returns>Prints the row count of Database[Integer]</returns>
         [TestMethod]
         public void DictCount()
         {
@@ -21,7 +20,24 @@ namespace UnitTesting
             Console.WriteLine(MyData.Count.ToString());
             Assert.AreNotEqual(MyData.Count, 0);
         }
+    }
 
+    [TestClass]
+    public class UnitTest2
+    {
+        /// <summary>
+        /// Unit Test to check contrant
+        /// </summary>
+        /// returns constrant error
+        [TestMethod]
+        public void OutOfRange()
+        {
+            // arrange
 
+            
+
+        }
+    
     }
 }
+
