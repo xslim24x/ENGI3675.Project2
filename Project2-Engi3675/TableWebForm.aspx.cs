@@ -17,55 +17,24 @@ namespace Project2_Engi3675
             // iterate through rows and create asp columns for the webpage
             foreach (KeyValuePair<int, Animal>a in AnimalData)
             {
-                // convert pulled results to strings
-                string column1 = a.Key.ToString();
-                string column2 = a.Value.AnimalBreed;
-                double column3 = a.Value.AnimalWeight;
-                double column4 = a.Value.AnimalAge;
-                string column5 = "<asp:Button ID=\"UpdateDB\" runat=\"server\" OnClick=\"dataUpdate\" Text=\"Submit\" />";
-
-                // create a row for each row pulled
-                TableRow newRow1 = new TableRow();
-                TableCell newCell1 = new TableCell();
-                TableCell newCell2 = new TableCell();
-                TableCell newCell3 = new TableCell();
-                TableCell newCell4 = new TableCell();
-                TableCell newCell5 = new TableCell();
-                TableCell newCell6 = new TableCell();
+               
+                TableRow tbrow= new TableRow();
                 
+                TableCell [] c = new TableCell[6];
 
-                Label newLabel1 = new Label();
-                Label newLabel2 = new Label();
-                Label newLabel3 = new Label();
-                Label newLabel4 = new Label();
-                Label newLabel5 = new Label();
-                Label newLabel6 = new Label();
+                for (int i = 0; i < 6; i++)
+                    c[i] = new TableCell();
 
-                newLabel1.Text = column1;
-                newLabel2.Text = column2;
-                newLabel3.Text = column3.ToString();
-                newLabel4.Text = column4.ToString();
-                newLabel5.Text = column5;
-                newLabel5.Text = "";
+                c[0].Text = a.Key.ToString();
+                c[1].Text = "<input type=\"text\" value=\""+a.Value.AnimalBreed+"\"/>";
+                c[2].Text = "<input type=\"text\" value=\"" + a.Value.AnimalWeight.ToString() + "\"/>";
+                c[3].Text = "<input type=\"text\" value=\"" + a.Value.AnimalAge.ToString() +"\"/>"; 
+                c[4].Text = "<Button ID=\"UpdateDB\" runat=\"server\" OnClick=\"dataUpdate\" type=\"Submit\">"+"Submit"+"</button>";
+                foreach (TableCell i in c){
+                    tbrow.Cells.Add(i);
+                }
+                tblAnimals.Rows.Add(tbrow);
 
-
-                // add labels to each cell and add cells to the rows
-                newCell1.Controls.Add(newLabel1);
-                newCell2.Controls.Add(newLabel2);
-                newCell3.Controls.Add(newLabel3);
-                newCell4.Controls.Add(newLabel2);
-                newCell5.Controls.Add(newLabel5);
-                newCell5.Controls.Add(newLabel6);
-
-                newRow1.Cells.Add(newCell1);
-                newRow1.Cells.Add(newCell2);
-                newRow1.Cells.Add(newCell3);
-                newRow1.Cells.Add(newCell4);
-                newRow1.Cells.Add(newCell5);
-                newRow1.Cells.Add(newCell6);
-
-
-                this.tblAnimals.Rows.Add(newRow1);
             }
         }
 

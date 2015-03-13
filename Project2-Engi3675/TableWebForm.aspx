@@ -18,30 +18,31 @@
 
             <asp:Table ID="tblAnimals" runat="server" BorderWidth="1">
                 <asp:TableHeaderRow>
-                    <asp:TableHeaderCell ColumnSpan="2">
+                    <asp:TableHeaderCell ColumnSpan="6">
                     Animals
                     </asp:TableHeaderCell>
                 </asp:TableHeaderRow>
-                <asp:TableRow>
-                    <asp:TableCell BackColor="#94D4E9">
+                <asp:TableHeaderRow>
+                    <asp:TableHeaderCell>
                     Serial Number
-                    </asp:TableCell>
-                    <asp:TableCell BackColor="#94D4E9">
+                    </asp:TableHeaderCell>
+                    <asp:TableHeaderCell>
                     Breed
-                    </asp:TableCell>
-                    <asp:TableCell BackColor="#94D4E9">
+                    </asp:TableHeaderCell>
+                    <asp:TableHeaderCell>
                     Weight
-                    </asp:TableCell>
-                    <asp:TableCell BackColor="#94D4E9">
+                    </asp:TableHeaderCell>
+                    <asp:TableHeaderCell>
                     Age
-                    </asp:TableCell>
-                    <asp:TableCell BackColor="#94D4E9">
-
-                    </asp:TableCell>
-                    <asp:TableCell BackColor="#94D4E9">
-
-                    </asp:TableCell>
-                </asp:TableRow>
+                    </asp:TableHeaderCell>
+                    <asp:TableHeaderCell>
+                    
+                    </asp:TableHeaderCell>
+                    <asp:TableHeaderCell>
+                    
+                    </asp:TableHeaderCell>
+                </asp:TableHeaderRow>
+                
             </asp:Table>
             <br />
             <br />
