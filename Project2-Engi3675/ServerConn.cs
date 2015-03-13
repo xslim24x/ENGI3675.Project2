@@ -11,8 +11,8 @@ namespace AnimalData
     public class Animal
     {
         public string AnimalBreed;
-        public double AnimalAge;
-        public double AnimalWeight;
+        public float AnimalAge;
+        public float AnimalWeight;
 
     }
     public static class ServerConn
@@ -55,26 +55,24 @@ namespace AnimalData
         public static Dictionary<int, Animal> DataDict()
         {
 
-            // create the dictionary accoring to values in the database
-            Dictionary<int, Animal> items = new Dictionary<int, Animal>();
 
+            Dictionary<int, Animal> temp2 = new Dictionary<int, Animal>();
             NpgsqlConnection conn = new NpgsqlConnection("Server=127.0.0.1; Port=5432; Database=LU.ENGI3675.Proj2; Integrated Security=true;");
 
             try
             {
                 conn.Open();
-
+                Animal temp = new Animal();
                 NpgsqlCommand cmd = new NpgsqlCommand("SELECT * FROM public.\"animals\"", conn);
                 NpgsqlDataReader dr = cmd.ExecuteReader();
 
-                Animal temp = new Animal();
-                Dictionary<int, Animal> temp2 = new Dictionary<int, Animal>();
                 // iterate through the columns and add results to the dictionary
                 while (dr.Read())
                 {
+
                     temp.AnimalBreed = (string)dr["Breed"];
-                    temp.AnimalAge = (double)dr["Age"];
-                    temp.AnimalWeight = (double)dr["Weight"];
+                    temp.AnimalAge = (float)dr["Age"];
+                    temp.AnimalWeight = (float)dr["Weight"];
                     temp2.Add((int)dr["Serial_Number"], temp);
                 }
             }
@@ -83,7 +81,7 @@ namespace AnimalData
                 conn.Close();
             }
 
-            return items;
+            return temp2;
         }
 
 
