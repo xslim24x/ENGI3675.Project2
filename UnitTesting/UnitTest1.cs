@@ -26,18 +26,45 @@ namespace UnitTesting
     public class UnitTest2
     {
         /// <summary>
-        /// Unit Test to check contrant
+        /// Unit Test checks Weight contrant
         /// </summary>
-        /// returns constrant error
-        [TestMethod]
-        public void OutOfRange()
-        {
-            // arrange
-
             
-
+        [TestMethod]
+        public void WeightOutOfRange()
+        {
+            //  Animal.Weight = 555;
+            //  Constrant ranges between 0 - 500
         }
-    
+    }
+
+    [TestClass]
+    public class UnitTest3
+    {
+        /// <summary>
+        /// Unit Test check NotNull constrant 
+        /// </summary>
+
+        [TestMethod]
+        public void NotNullVariable()
+        {
+            //  Animal.Breed = { };
+            //  Constrant: Animal.Breed Cannot be NULL
+        }
+    }
+
+    [TestClass]
+    public class UnitTest4
+    {
+        /// <summary>
+        /// Unit Test check Age constraint
+        /// </summary>
+
+        [TestMethod]
+        public void AgeOutOfRange()
+        {
+            //  Animal.Age = 122;
+            //  Constraint ranges between 0-100 
+        }
     }
 }
 
