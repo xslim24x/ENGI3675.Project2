@@ -1,12 +1,10 @@
-﻿using System;
-
-using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Project2_Engi3675;
-using AnimalData;
-
-namespace UnitTesting
+﻿namespace UnitTesting
 {
+    using System;
+    using System.Collections.Generic;
+    using AnimalData;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
     [TestClass]
     public class UnitTest1
     {
@@ -16,9 +14,9 @@ namespace UnitTesting
         [TestMethod]
         public void DictCount()
         {
-            Dictionary<int, Animal> MyData = AnimalData.ServerConn.DataDict();
-            Console.WriteLine(MyData.Count.ToString());
-            Assert.AreNotEqual(MyData.Count, 0);
+            Dictionary<int, Animal> myData = AnimalData.ServerConn.DataDict();
+            Console.WriteLine(myData.Count.ToString());
+            Assert.AreNotEqual(myData.Count, 0);
         }
     }
 
@@ -26,14 +24,13 @@ namespace UnitTesting
     public class UnitTest2
     {
         /// <summary>
-        /// Unit Test checks Weight contrant
+        /// Unit Test checks Weight constraint
         /// </summary>
-            
         [TestMethod]
         public void WeightOutOfRange()
         {
-            //  Animal.Weight = 555;
-            //  Constrant ranges between 0 - 500
+            // Animal.Weight = 555;
+            // Constraint ranges between 0 - 500
         }
     }
 
@@ -41,14 +38,13 @@ namespace UnitTesting
     public class UnitTest3
     {
         /// <summary>
-        /// Unit Test check NotNull constrant 
+        /// Unit Test check NotNull constraint 
         /// </summary>
-
         [TestMethod]
         public void NotNullVariable()
         {
-            //  Animal.Breed = { };
-            //  Constrant: Animal.Breed Cannot be NULL
+            // Animal.Breed = { };
+            // Constrant: Animal.Breed Cannot be NULL
         }
     }
 
@@ -58,13 +54,11 @@ namespace UnitTesting
         /// <summary>
         /// Unit Test check Age constraint
         /// </summary>
-
         [TestMethod]
         public void AgeOutOfRange()
         {
-            //  Animal.Age = 122;
-            //  Constraint ranges between 0-100 
+            // Animal.Age = 122;
+            // Constraint ranges between 0-100 
         }
     }
 }
-

@@ -1,27 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using Npgsql;
-
-namespace AnimalData
+﻿namespace AnimalData
 {
-    public class Animal
-    {
-        public string AnimalBreed;
-        public float AnimalAge;
-        public float AnimalWeight;
+    using System.Collections.Generic;
+    using Npgsql;
 
-    }
     public static class ServerConn
     {
         /// <summary>
         /// Create in CRUD interface
         /// </summary>
         /// <param name="a">AnimalClass to be added</param>
-        /// <returns>0 if everythign went ok</returns>
+        /// <returns>0 if everything went ok</returns>
         public static int DataNew(Animal a)
         {
             int problems = 0;
@@ -34,7 +22,6 @@ namespace AnimalData
 
                 NpgsqlCommand cmd = new NpgsqlCommand("INSERT INTO public.\"animals\"(Breed,Weight,Age) VALUES (:a.AnimalBreed,:a.AnimalWeight,:a.AnimalAge);", conn);
                 NpgsqlDataReader dr = cmd.ExecuteReader();
-
             }
             catch
             {
@@ -54,8 +41,6 @@ namespace AnimalData
         /// <returns>Dictionary<int,AnimalClass></returns>
         public static Dictionary<int, Animal> DataDict()
         {
-
-
             Dictionary<int, Animal> temp2 = new Dictionary<int, Animal>();
             NpgsqlConnection conn = new NpgsqlConnection("Server=127.0.0.1; Port=5432; Database=LU.ENGI3675.Proj2; Integrated Security=true;");
 
@@ -69,7 +54,6 @@ namespace AnimalData
                 // iterate through the columns and add results to the dictionary
                 while (dr.Read())
                 {
-
                     temp.AnimalBreed = (string)dr["Breed"];
                     temp.AnimalAge = (float)dr["Age"];
                     temp.AnimalWeight = (float)dr["Weight"];
@@ -83,7 +67,6 @@ namespace AnimalData
 
             return temp2;
         }
-
 
         /// <summary
         /// Update Entry in Database for CRUD interface
@@ -102,7 +85,6 @@ namespace AnimalData
                 conn.Open();
                 NpgsqlCommand cmd = new NpgsqlCommand("UPDATE public.\"animals\"(Breed,Weight,Age) VALUES (:a.AnimalBreed,:a.AnimalWeight,:a.AnimalAge) WHERE Serial_Number = :id;", conn);
                 NpgsqlDataReader dr = cmd.ExecuteReader();
-
             }
             catch
             {
@@ -120,7 +102,7 @@ namespace AnimalData
         /// Delete Entry in Database for CRUD interface
         /// </summary>
         /// <param name="id">serial id to be deleted</param>
-        /// <returns>0 if everythign went ok</returns>
+        /// <returns>0 if everything went ok</returns>
         public static int DataDel(int id)
         {
             int problems = 0;
@@ -133,7 +115,6 @@ namespace AnimalData
 
                 NpgsqlCommand cmd = new NpgsqlCommand("DELETE FROM public.\"animals\" WHERE Serial_Number = :id;", conn);
                 NpgsqlDataReader dr = cmd.ExecuteReader();
-
             }
             catch
             {
@@ -146,5 +127,12 @@ namespace AnimalData
 
             return problems;
         }
+    }
+
+    public class Animal
+    {
+        public string AnimalBreed;
+        public float AnimalAge;
+        public float AnimalWeight;
     }
 }

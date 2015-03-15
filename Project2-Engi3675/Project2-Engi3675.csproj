@@ -36,6 +36,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <RunCodeAnalysis>true</RunCodeAnalysis>
+    <DocumentationFile>bin\Project2-Engi3675.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -49,21 +50,14 @@
     <Reference Include="Npgsql">
       <HintPath>..\packages\Npgsql.2.2.5\lib\net45\Npgsql.dll</HintPath>
     </Reference>
-    <Reference Include="Selenium.WebDriver.Extensions.Core">
-      <HintPath>..\packages\Selenium.WebDriver.Extensions.Core.1.2.305\lib\net45\Selenium.WebDriver.Extensions.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="SikuliModule">
-      <HintPath>..\packages\SikuliIntegrator.1.1.0\lib\SikuliModule.dll</HintPath>
-    </Reference>
-    <Reference Include="SikuliSharp">
-      <HintPath>..\packages\SikuliSharp.1.0.3\lib\net45\SikuliSharp.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="TableWebForm.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -159,50 +153,6 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\StyleCop.MSBuild.4.7.49.1\build\StyleCop.MSBuild.Targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\StyleCop.MSBuild.4.7.49.1\build\StyleCop.MSBuild.Targets'))" />
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
-  </Target>
-  <PropertyGroup Label="DownloadChromeDriverBuildTask">
-    <CoreBuildDependsOn>DownloadChromeDriver;$(CoreBuildDependsOn)</CoreBuildDependsOn>
-    <ChromeDriverInstallPath>$(SolutionDir)packages\Selenium.WebDriver.ChromeDriver.2.14.0.0\</ChromeDriverInstallPath>
-    <ChromeDriverToolsPath>$(ChromeDriverInstallPath)tools\</ChromeDriverToolsPath>
-    <ChromeDriverInitScriptPath>$(ChromeDriverToolsPath)Init.ps1</ChromeDriverInitScriptPath>
-    <ChromeDriverPath>$(ChromeDriverInstallPath)content\chromedriver.exe</ChromeDriverPath>
-    <PowerShellExe Condition="'$(PowerShellExe)'==''">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
-  </PropertyGroup>
-  <Target Name="DownloadChromeDriver" Label="DownloadChromeDriverBuildTask">
-    <Exec Condition="!Exists('$(ChromeDriverPath)')" Command="$(PowerShellExe) -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; { &amp;'$(ChromeDriverInitScriptPath)' '$(ChromeDriverInstallPath)' '$(ChromeDriverToolsPath)'} &quot;" />
-  </Target>
-  <PropertyGroup Label="DownloadIEDriverBuildTask">
-    <CoreBuildDependsOn>DownloadIEDriver;$(CoreBuildDependsOn)</CoreBuildDependsOn>
-    <IEDriverInstallPath>$(SolutionDir)packages\Selenium.WebDriver.IEDriver.2.45.0.1\</IEDriverInstallPath>
-    <IEDriverToolsPath>$(IEDriverInstallPath)tools\</IEDriverToolsPath>
-    <IEDriverInitScriptPath>$(IEDriverToolsPath)Init.ps1</IEDriverInitScriptPath>
-    <IEDriverPath>$(IEDriverInstallPath)content\IEDriverServer.exe</IEDriverPath>
-    <PowerShellExe Condition="'$(PowerShellExe)'==''">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
-  </PropertyGroup>
-  <Target Name="DownloadIEDriver" Label="DownloadIEDriverBuildTask">
-    <Exec Condition="!Exists('$(IEDriverPath)')" Command="$(PowerShellExe) -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; { &amp;'$(IEDriverInitScriptPath)' '$(IEDriverInstallPath)' '$(IEDriverToolsPath)'} &quot;" />
-  </Target>
-  <PropertyGroup Label="DownloadChromeDriverBuildTask">
-    <CoreBuildDependsOn>DownloadChromeDriver;$(CoreBuildDependsOn)</CoreBuildDependsOn>
-    <ChromeDriverInstallPath>$(SolutionDir)packages\Selenium.WebDriver.ChromeDriver.2.14.0.0\</ChromeDriverInstallPath>
-    <ChromeDriverToolsPath>$(ChromeDriverInstallPath)tools\</ChromeDriverToolsPath>
-    <ChromeDriverInitScriptPath>$(ChromeDriverToolsPath)Init.ps1</ChromeDriverInitScriptPath>
-    <ChromeDriverPath>$(ChromeDriverInstallPath)content\chromedriver.exe</ChromeDriverPath>
-    <PowerShellExe Condition="'$(PowerShellExe)'==''">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
-  </PropertyGroup>
-  <Target Name="DownloadChromeDriver" Label="DownloadChromeDriverBuildTask">
-    <Exec Condition="!Exists('$(ChromeDriverPath)')" Command="$(PowerShellExe) -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; { &amp;'$(ChromeDriverInitScriptPath)' '$(ChromeDriverInstallPath)' '$(ChromeDriverToolsPath)'} &quot;" />
-  </Target>
-  <PropertyGroup Label="DownloadIEDriverBuildTask">
-    <CoreBuildDependsOn>DownloadIEDriver;$(CoreBuildDependsOn)</CoreBuildDependsOn>
-    <IEDriverInstallPath>$(SolutionDir)packages\Selenium.WebDriver.IEDriver.2.45.0.1\</IEDriverInstallPath>
-    <IEDriverToolsPath>$(IEDriverInstallPath)tools\</IEDriverToolsPath>
-    <IEDriverInitScriptPath>$(IEDriverToolsPath)Init.ps1</IEDriverInitScriptPath>
-    <IEDriverPath>$(IEDriverInstallPath)content\IEDriverServer.exe</IEDriverPath>
-    <PowerShellExe Condition="'$(PowerShellExe)'==''">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
-  </PropertyGroup>
-  <Target Name="DownloadIEDriver" Label="DownloadIEDriverBuildTask">
-    <Exec Condition="!Exists('$(IEDriverPath)')" Command="$(PowerShellExe) -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; { &amp;'$(IEDriverInitScriptPath)' '$(IEDriverInstallPath)' '$(IEDriverToolsPath)'} &quot;" />
   </Target>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
